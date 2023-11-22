@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
+import fs from 'fs'; // File System
 import { Command } from 'commander';
-
-const hello = (message: string) => {};
 
 // Declare the program
 const program = new Command();
@@ -25,9 +23,9 @@ program
       }
     ) => {
       if (opts.capitalize) {
-        console.log(`Hello ${message}`.toUpperCase());
+        console.log(`\x1b[36m%s\x1b[0m` + `Hello ${message}`.toUpperCase());
       } else {
-        console.log(`Hello ${message}`);
+        console.log(`\x1b[36mHello ${message}\x1b[0m`);
       }
     }
   );

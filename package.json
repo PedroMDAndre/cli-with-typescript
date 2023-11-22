@@ -7,7 +7,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "link-cli": "yarn --global unlink practice-cli && chmod +x ./dist/index.js && yarn --global link",
+    "link-cli": "(yarn --global unlink practice-cli || true) && chmod +x ./dist/index.js && yarn --global link",
     "dev": "npx tsc -w",
     "run-access": "chmod +x ./dist/index.js"
   },

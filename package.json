@@ -1,15 +1,21 @@
 {
   "name": "practice-cli",
+  "bin": {
+    "practice": "./dist/index.js"
+  },
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "link-cli": "yarn --global unlink practice-cli && yarn --global link",
+    "dev": "npx tsc -w",
+    "run-access": "chmod +x ./dist/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^20.9.3",
     "typescript": "^5.3.2"
   }
 }
